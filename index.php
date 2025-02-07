@@ -42,11 +42,13 @@
 
             <div class="form-group">
                 <label>Material del Producto:</label>
-                <input type="checkbox" name="material[]" value="1"> Plástico
-                <input type="checkbox" name="material[]" value="2"> Metal
-                <input type="checkbox" name="material[]" value="3"> Madera
-                <input type="checkbox" name="material[]" value="4"> Vidrio
-                <input type="checkbox" name="material[]" value="5"> Textil
+                <div class="material-options">
+                    <label><input type="checkbox" name="material[]" value="1"> Plástico</label>
+                    <label><input type="checkbox" name="material[]" value="2"> Metal</label>
+                    <label><input type="checkbox" name="material[]" value="3"> Madera</label>
+                    <label><input type="checkbox" name="material[]" value="4"> Vidrio</label>
+                    <label><input type="checkbox" name="material[]" value="5"> Textil</label>
+                </div>
             </div>
 
             <div class="form-group">
