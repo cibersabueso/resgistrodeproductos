@@ -1,67 +1,169 @@
-/* Archivo: styles.css */
-
+/* Fuente General */
 body {
     font-family: Arial, sans-serif;
+    font-size: 14px;
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 20px auto;
     background: white;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15), 
+                0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
 }
 
+/* Agrupar los campos en dos columnas */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    width: 100%;
+}
+
+/* Estilos de etiquetas y campos */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
-    font-weight: bold;
     display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: normal;
+    font-size: 14px;
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border: 2px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
-button {
+select {
     width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+    appearance: menulist;
 }
 
-button:hover {
-    background-color: #218838;
+textarea {
+    min-height: 80px;
+    resize: vertical;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
-/* Estilos para los checkboxes en línea */
+/* Material options */
 .material-options {
     display: flex;
-    gap: 15px;
-    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+    padding: 0 20px;
 }
 
 .material-options label {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-weight: normal;
+    gap: 8px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.material-options input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* Descripción padding */
+.form-group:last-child {
+    padding: 0 20px;
+    max-width: calc(100% - 40px);
+}
+
+/* Botón de guardar */
+button {
+    width: calc(100% - 40px);
+    padding: 12px;
+    background-color: #1aab8a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 20px;
+}
+
+button:hover {
+    background-color: #148f72;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 0;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-row .form-group,
+    .form-group {
+        max-width: none;
+        width: auto;
+        margin: 0 0 20px 0;
+        padding: 0 20px;
+    }
+
+    input, 
+    select, 
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .material-options {
+        flex-wrap: wrap;
+        padding: 0 20px;
+        margin-top: 8px;
+    }
+
+    .form-group:last-child {
+        max-width: none;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    button {
+        width: calc(100% - 40px);
+        margin: 20px auto;
+    }
 }

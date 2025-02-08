@@ -1,3 +1,4 @@
+<!-- Archivo: index.php -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,36 +11,46 @@
     <div class="container">
         <h2>Formulario de Producto</h2>
         <form id="productForm">
-            <div class="form-group">
-                <label for="codigo">Código:</label>
-                <input type="text" id="codigo" name="codigo" required>
+            <!-- Primera fila: Código - Nombre -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" name="codigo">
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <!-- Segunda fila: Bodega - Sucursal -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bodega">Bodega:</label>
+                    <select id="bodega" name="bodega"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sucursal">Sucursal:</label>
+                    <select id="sucursal" name="sucursal"></select>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="bodega">Bodega:</label>
-                <select id="bodega" name="bodega" required></select>
+            <!-- Tercera fila: Moneda - Precio -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="moneda">Moneda:</label>
+                    <select id="moneda" name="moneda"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="precio">Precio:</label>
+                    <input type="text" id="precio" name="precio">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="sucursal">Sucursal:</label>
-                <select id="sucursal" name="sucursal" required></select>
-            </div>
-
-            <div class="form-group">
-                <label for="moneda">Moneda:</label>
-                <select id="moneda" name="moneda" required></select>
-            </div>
-
-            <div class="form-group">
-                <label for="precio">Precio:</label>
-                <input type="number" id="precio" name="precio" required>
-            </div>
-
+            <!-- Material del Producto -->
             <div class="form-group">
                 <label>Material del Producto:</label>
                 <div class="material-options">
@@ -51,9 +62,10 @@
                 </div>
             </div>
 
+            <!-- Descripción -->
             <div class="form-group">
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" required></textarea>
+                <textarea id="descripcion" name="descripcion"></textarea>
             </div>
 
             <button type="submit">Guardar Producto</button>
